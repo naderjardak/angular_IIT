@@ -1,0 +1,42 @@
+<div class="container mt-4">
+  <h2>Compte List</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>RIB</th>
+      <th>Sold</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let compte of compteList">
+      <td>{{ compte.id }}</td>
+      <td>{{ compte.rib }}</td>
+      <td>{{ compte.sold }}</td>
+      <td><input class="btn btn-primary" type="button" value="delete" (click)="deleteClient(compte.id)" ></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="container mt-4">
+  <h2>Client List</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Addr</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clientList">
+      <td>{{ client.nom }}</td>
+      <td>{{ client.prenom }}</td>
+      <td>{{ client.adress }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
